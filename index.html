@@ -20,7 +20,10 @@
 
         <!-- Registration Form -->
         <form id="registration">
-          <input name="username" type="text" placeholder="Username" />
+          <input name="username" type="text" 
+          pattern="^\S+[0-9a-zA-Z]*$"
+          title="No special characters and with 2 unique characters and no white spaces."
+          placeholder="Username" minlength="4" required/>
           <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
           <input name="email" type="text" placeholder="Email" />
