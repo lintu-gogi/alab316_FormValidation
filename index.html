@@ -26,17 +26,19 @@
           placeholder="Username" minlength="4" required/>
           <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
-          <input name="email" type="text" placeholder="Email" />
+          <input name="email" type="text" 
+          pattern="(?=.*@)(?!.*example).*" placeholder="Email" required/>
           <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
           ><br />
 
-          <input name="password" type="text" placeholder="Password" />
+          <input name="password" type="text" placeholder="Password" required />
           <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
 
           <input
             name="passwordCheck"
             type="text"
             placeholder="Repeat Password"
+            required
           />
           <span class="input-icon"><i class="fa-solid fa-key"></i></span
           ><br /><br />

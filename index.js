@@ -7,7 +7,7 @@ const iAgreeChkBox = form.elements["terms"];
 
 form.addEventListener("submit", validate);
 
-function validate() {
+function validate(evt) {
   
     const emailVal = validateEmail();
     if (emailVal === false) {
@@ -30,28 +30,10 @@ function validate() {
   
 function validateEmail() {
     let emailVal = email.value;
-  
-    const atpos = emailVal.indexOf("@");
-    const dotpos = emailVal.lastIndexOf(".");
-  
-    if (atpos < 1) {
-      alert(
-        "Your email must include an @ symbol, which must not be at the beginning of the email."
-      );
-      email.focus();
-      evt.returnValue = false;
-      return false;
-    }
-  
-    if (dotpos - atpos < 2) {
-      alert(
-        "Invalid structure: @.\nYou must include a domain name after the @ symbol."
-      );
-      email.focus();
-      evt.returnValue = false;
-      return false;
-    }
-  
+   if(emailVal!=="")
+    
+    email.focus();
+     
     evt.returnValue = true;
     return emailVal;
   }
